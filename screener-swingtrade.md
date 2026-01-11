@@ -194,14 +194,23 @@ clear-ga explain chestha.
 👉 **Ee 10 ok ayithe → chart open cheyyi**
 
 1️⃣ Sales latest quarter ↑
+
 2️⃣ Profit latest quarter ↑
+
 3️⃣ YOY sales growth >15%
+
 4️⃣ YOY profit growth >20%
+
 5️⃣ OPM stable or increasing
+
 6️⃣ ROCE >18%
+
 7️⃣ Debt to Equity <0.5
+
 8️⃣ Promoter holding stable
+
 9️⃣ Return 3M & 6M positive
+
 🔟 No high pledge
 
 ---
