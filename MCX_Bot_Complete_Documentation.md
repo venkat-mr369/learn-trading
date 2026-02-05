@@ -253,20 +253,20 @@ def _sqlite_pragmas(dbapi_conn, connection_record):
 ## 4.1 Complete Flow Diagram
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     STARTUP SEQUENCE                             │
-├─────────────────────────────────────────────────────────────────┤
+|                     STARTUP SEQUENCE                             │
+├───────────────────────────────────────────────────────────────── ┤
 │ 1. Initialize logging                                            │
 │ 2. Load configuration                                            │
 │ 3. Connect to OpenAlgo API                                       │
-│ 4. Wait until 09:05 IST (smart_startup_sleep)                   │
-│ 5. Generate symbols_to_trade (CRUDEOIL, NATURALGAS)             │
+│ 4. Wait until 09:05 IST (smart_startup_sleep)                    │
+│ 5. Generate symbols_to_trade (CRUDEOIL, NATURALGAS)              │
 │ 6. Fetch instruments from broker                                 │
 │ 7. Check for existing positions                                  │
 │ 8. Start all threads                                             │
-└─────────────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────────── ┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                     THREAD ARCHITECTURE                          │
+│                     THREAD ARCHITECTURE                         │
 ├─────────────────────────────────────────────────────────────────┤
 │ Thread 1: websocket_thread_func    → Live price feed            │
 │ Thread 2: fallback_thread_func     → REST API backup            │
@@ -277,10 +277,10 @@ def _sqlite_pragmas(dbapi_conn, connection_record):
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                     DATA FLOW                                    │
+│                     DATA FLOW                                   │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  [WebSocket] ──→ [LTP Dict] ──→ [OHLC Calculation]              │
+│  [WebSocket] ──→ [LTP Dict] ──→ [OHLC Calculation]               │
 │       │                              │                           │
 │       │                              ↓                           │
 │       │                    [Renko Brick Calculation]             │
@@ -509,7 +509,7 @@ Order Status Flow:
 ┌────────┐    ┌───────────┐    ┌────────┐
 │  OPEN  │ ──→│ INPOSITION│ ──→│ CLOSED │
 └────────┘    └───────────┘    └────────┘
-     │                              ↑
+     │                             ↑
      │         ┌───────────┐       │
      └────────→│ CANCELLED │───────┘
                └───────────┘
